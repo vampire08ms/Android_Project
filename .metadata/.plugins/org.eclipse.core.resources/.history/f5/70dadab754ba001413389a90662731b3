@@ -1,0 +1,7 @@
+package com.example.ring;
+
+import android.app.Service;
+
+public class MyService extends Service {
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.example.ring.Notification&apos; to &apos;MainNotification&apos;&#x0D;&#x0A;- Original project: &apos;Ring&apos;&#x0D;&#x0A;- Original element: &apos;com.example.ring.Notification&apos;&#x0D;&#x0A;- Renamed element: &apos;com.example.ring.MainNotification&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Notification&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.example.ring{Notification.java[Notification" matchStrategy="1" name="MainNotification" qualified="false" references="true" similarDeclarations="false" stamp="1418991096025" textual="false" version="1.0"/>
+</session>
