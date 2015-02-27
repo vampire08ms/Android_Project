@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ring</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main_activity1">MainActivity1</string>
+    <string name="title_activity_notification">Notification</string>
+    <string name="title_activity_main_toast">MainToast</string>
+    <string name="title_activity_shared_perferences">SharedPerferencesActivity</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_up_info">UpInfoActivity</string>
+    <string name="title_activity_industry_classifications">IndustryClassificationsActivity</string>
+    <string name="title_activity_industry_classifications_sec">IndustryClassificationsSecActivity</string>
+    <string name="title_activity_sqlite">SQLiteActivity</string>
+    <string name="title_activity_service_test">ServiceTest</string>
+
+</resources>
