@@ -21,6 +21,7 @@ import android.view.*;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 @SuppressLint("NewApi")
@@ -36,6 +37,7 @@ public class MainActivity1 extends ActionBarActivity {
 	public String string = null;
 	public IntentFilter intentReceiverFilter = null;;
 	public MessageReceiver messageReceiver = null;
+	public ImageView itemImage = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -47,14 +49,18 @@ public class MainActivity1 extends ActionBarActivity {
 		myTextView = (TextView) findViewById(R.id.textView1);
 		mySQLite = (Button) findViewById(R.id.button2);
 		serviceButton = (Button) findViewById(R.id.button3);
+		itemImage = (ImageView)findViewById(R.id.imageView1);
+		Treasure resultTreasure = null;
 		intent = getIntent();
 		try {
-			myTextView.setText(intent.getStringExtra("extra_data"));
+			resultTreasure = (Treasure)intent.getParcelableExtra("listItem");
+			myTextView.setText(resultTreasure.getName().toString());
+			itemImage.setImageResource(resultTreasure.getImageId());
+			Log.d("MainActivity1",resultTreasure.getName().toString());
 		} catch (Exception e) {
 			// TODO: handle exception
 			Log.e("MainActivity1", "TextView”–Œ Ã‚");
 		}
-		Log.d("MainActivity1", intent.getStringExtra("extra_data"));
 
 		myButton_add.setOnClickListener(new OnClickListener() {
 
