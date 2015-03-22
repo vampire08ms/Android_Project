@@ -2,6 +2,7 @@ package com.example.ring;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import android.app.Activity;
 import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
@@ -11,6 +12,7 @@ import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -48,7 +50,8 @@ public class MainActivity extends Activity {
 		ListView listView = (ListView) findViewById(R.id.listView1);
 
 		initTreasure();
-		TreasureAdapter adapter = new TreasureAdapter(MainActivity.this,R.layout.treasure_item, treasureList);
+		TreasureAdapter adapter = new TreasureAdapter(MainActivity.this,
+				R.layout.treasure_item, treasureList);
 		listView.setAdapter(adapter);
 		listView.setOnItemClickListener(new OnItemClickListener() {
 			@Override
@@ -58,6 +61,11 @@ public class MainActivity extends Activity {
 				Treasure treasure = treasureList.get(position);
 				Toast.makeText(MainActivity.this, treasure.getName(),
 						Toast.LENGTH_SHORT).show();
+				
+				Intent intent = new Intent();
+				intent.putExtra("listItem", treasure);
+				intent.setClass(MainActivity.this, MainActivity1.class);
+				startActivity(intent);
 			}
 		});
 		NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
@@ -71,9 +79,12 @@ public class MainActivity extends Activity {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent(MainActivity.this,
 						MainActivity1.class);
-				intent.putExtra("extra_data", editText.getText().toString());
+//				intent.putExtra("extra_data", editText.getText().toString());
 				// startActivity(intent);
-				startActivityForResult(intent, 1);
+				Treasure temp = new Treasure( "lisong", 123 );
+				intent.putExtra("test", temp);
+				startActivity(intent);
+//				startActivityForResult(intent, 1);
 			}
 		});
 
@@ -82,7 +93,6 @@ public class MainActivity extends Activity {
 		intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
 		network = new NetworkChangeReceiver();
 		registerReceiver(network, intentFilter);
-
 	}
 
 	@Override
@@ -180,28 +190,36 @@ public class MainActivity extends Activity {
 	}
 
 	private void initTreasure() {
-		Treasure icon_ring_of_lightning_protection = new Treasure("¸ñ¶·Ê¿È­Ì×",R.drawable.icon_ring_of_lightning_protection);
+		Treasure icon_ring_of_lightning_protection = new Treasure("¸ñ¶·Ê¿È­Ì×",
+				R.drawable.icon_ring_of_lightning_protection);
 		treasureList.add(icon_ring_of_lightning_protection);
 
-		Treasure icon_breastplate_of_eldritch_might = new Treasure("ÉñÁ¦ĞØ¼×",	R.drawable.icon_breastplate_of_eldritch_might);
+		Treasure icon_breastplate_of_eldritch_might = new Treasure("ÉñÁ¦ĞØ¼×",
+				R.drawable.icon_breastplate_of_eldritch_might);
 		treasureList.add(icon_breastplate_of_eldritch_might);
 
-		Treasure icon_cuirass_of_the_dwarven_kings = new Treasure("°«ÈËÍõÌú¼×",R.drawable.icon_cuirass_of_the_dwarven_kings);
+		Treasure icon_cuirass_of_the_dwarven_kings = new Treasure("°«ÈËÍõÌú¼×",
+				R.drawable.icon_cuirass_of_the_dwarven_kings);
 		treasureList.add(icon_cuirass_of_the_dwarven_kings);
 
-		Treasure icon_dragon_scale_armor = new Treasure("Áú÷ëîø¼×",	R.drawable.icon_dragon_scale_armor);
+		Treasure icon_dragon_scale_armor = new Treasure("Áú÷ëîø¼×",
+				R.drawable.icon_dragon_scale_armor);
 		treasureList.add(icon_dragon_scale_armor);
 
-		Treasure icon_robe_of_sar_issus = new Treasure("Èø-ÒÁËÕË¹µÄ³¤ÅÛ",R.drawable.icon_robe_of_sar_issus);
+		Treasure icon_robe_of_sar_issus = new Treasure("Èø-ÒÁËÕË¹µÄ³¤ÅÛ",
+				R.drawable.icon_robe_of_sar_issus);
 		treasureList.add(icon_robe_of_sar_issus);
 
-		Treasure icon_runic_war_harness = new Treasure("·ûÎÄÕ½¼×",R.drawable.icon_runic_war_harness);
+		Treasure icon_runic_war_harness = new Treasure("·ûÎÄÕ½¼×",
+				R.drawable.icon_runic_war_harness);
 		treasureList.add(icon_runic_war_harness);
 
-		Treasure icon_scale_mail_of_enlightenment = new Treasure("ÆôµÏÁÛ¼×",R.drawable.icon_scale_mail_of_enlightenment);
+		Treasure icon_scale_mail_of_enlightenment = new Treasure("ÆôµÏÁÛ¼×",
+				R.drawable.icon_scale_mail_of_enlightenment);
 		treasureList.add(icon_scale_mail_of_enlightenment);
 
-		Treasure icon_tunic_of_the_carved_flesh = new Treasure("Æ¤ÎÆÕ½ÅÛ",R.drawable.icon_tunic_of_the_carved_flesh);
+		Treasure icon_tunic_of_the_carved_flesh = new Treasure("Æ¤ÎÆÕ½ÅÛ",
+				R.drawable.icon_tunic_of_the_carved_flesh);
 		treasureList.add(icon_tunic_of_the_carved_flesh);
 
 	}
