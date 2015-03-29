@@ -1,16 +1,34 @@
 package com.example.ring;
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 public class RegisterActivity extends ActionBarActivity {
+
+	public Button upLoadInfo = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_register);
+
+		upLoadInfo = (Button) findViewById(R.id.upLoadInfo);
+		upLoadInfo.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent();
+				intent.setClass(RegisterActivity.this, UpInfoActivity.class);
+				startActivity(intent);
+			}
+		});
 	}
 
 	@Override
