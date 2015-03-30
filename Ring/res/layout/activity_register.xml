@@ -16,11 +16,13 @@
         android:orientation="vertical" >
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/upLoadInfo"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="上传认证资料" />
+            android:text="上传认证资料" 
+            android:textColor="#FFFFFF"
+            android:background="@drawable/shape"/>
     </LinearLayout>
 
     <LinearLayout
@@ -45,11 +47,13 @@
         android:layout_alignRight="@+id/textView2"
         android:layout_below="@+id/textView2"
         android:orientation="vertical" >
+                <!--  android:background="@drawable/shape_no_corner_without_bottom"-->
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="horizontal" 
+            android:layout_marginTop="10dp">
 
             <TextView
                 android:id="@+id/textView3"
@@ -57,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="商家名称："
-                android:textSize="12dp" />
+                android:textSize="14dp"/>
 
             <EditText
                 android:id="@+id/editText1"
@@ -65,14 +69,15 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="最多输入12个汉字"
-                android:inputType="textMultiLine"
-                android:textSize="12dp" />
+                android:textSize="13dp" 
+                android:background = "@null"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="horizontal" 
+            android:layout_marginTop="10dp">
 
             <TextView
                 android:id="@+id/industryClassificationTextView"
@@ -80,20 +85,29 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="行业分类："
-                android:textSize="12dp" />
-
+                android:textSize="14dp" />
+<!-- 
             <EditText
                 android:id="@+id/industryClassificationTextView4EditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine"
-                android:textSize="12dp" />
+                android:textSize="14dp" /> -->
+
+            <TextView
+                android:id="@+id/industryClassification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 android:textSize="13dp"
+                 android:hint="选择商家经营范围"/>
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="horizontal" 
+            android:layout_marginTop="10dp">
 
             <TextView
                 android:id="@+id/registerNumberTextView"
@@ -101,7 +115,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="注  册  号："
-                android:textSize="12dp" />
+                android:textSize="14dp" />
 
             <EditText
                 android:id="@+id/registerNumberEditText"
@@ -109,13 +123,15 @@
                 android:layout_height="wrap_content"
                 android:hint="填写营业执照12位或15位注册号"
                 android:inputType="textMultiLine"
-                android:textSize="12dp" />
+                android:textSize="13dp"
+                android:background = "#00000000" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="horizontal" 
+            android:layout_marginTop="10dp">
 
             <TextView
                 android:id="@+id/addressTextView"
@@ -123,20 +139,22 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="详细地址："
-                android:textSize="12dp" />
+                android:textSize="14dp" />
 
             <EditText
                 android:id="@+id/addressEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine"
-                android:textSize="12dp" />
+                android:textSize="14dp" 
+                android:background = "#00000000"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp" >
 
             <TextView
                 android:id="@+id/mapLocationTextView3"
@@ -144,20 +162,22 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="地图定位："
-                android:textSize="12dp" />
+                android:textSize="14dp" />
 
             <EditText
                 android:id="@+id/mapLocationEditText1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine"
-                android:textSize="12dp" />
+                android:textSize="14dp" 
+                android:background = "#00000000"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="horizontal" 
+            android:layout_marginTop="10dp">
 
             <TextView
                 android:id="@+id/proposerTextView3"
@@ -165,20 +185,22 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="申  请  人："
-                android:textSize="12dp" />
+                android:textSize="14dp" />
 
             <EditText
                 android:id="@+id/proposerEditText1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine"
-                android:textSize="12dp" />
+                android:textSize="14dp" 
+                android:background = "#00000000"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="horizontal" 
+            android:layout_marginTop="10dp">
 
             <TextView
                 android:id="@+id/telephoneTextView"
@@ -186,14 +208,15 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="联系电话："
-                android:textSize="12dp" />
+                android:textSize="14dp" />
 
             <EditText
                 android:id="@+id/telephoneEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine"
-                android:textSize="12dp" />
+                android:textSize="14dp" 
+                android:background = "#00000000"/>
         </LinearLayout>
     </LinearLayout>
 

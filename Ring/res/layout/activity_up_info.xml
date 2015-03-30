@@ -61,6 +61,8 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/TextView02"
         android:layout_alignParentBottom="true"
-        android:text="上传认证资料" />
+        android:background="@drawable/shape"
+        android:text="上传认证资料"
+        android:textColor="#FFFFFF" />
 
 </RelativeLayout>

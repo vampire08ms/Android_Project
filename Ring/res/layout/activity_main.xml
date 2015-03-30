@@ -8,31 +8,19 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.ring.MainActivity" >
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical" >
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
 
-        <EditText
-            android:id="@+id/editText1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="10dp" >
-        </EditText>
-
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Button" />
-
-        <ListView
-            android:id="@+id/listView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:divider="#0000" >
-        </ListView>
-    </LinearLayout>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_below="@+id/button1"
+        android:layout_marginTop="50dp"
+        android:text="商户" />
 
 </RelativeLayout>
