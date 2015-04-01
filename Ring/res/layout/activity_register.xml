@@ -20,9 +20,9 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="上传认证资料" 
-            android:textColor="#FFFFFF"
-            android:background="@drawable/shape"/>
+            android:background="@drawable/shape"
+            android:text="上传认证资料"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 
     <LinearLayout
@@ -36,48 +36,78 @@
             android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal|center_vertical"
-            android:text="1 商店详情 > 2 上传资料" />
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical|right"
+            android:text="1 商店详情 "
+            android:textColor="#3ECBDF" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical|left"
+            android:text="> 2 上传资料" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="车印象将对商家信息做审核，请确认内容真实有效"
+        android:textSize="12dp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignRight="@+id/textView2"
+        android:layout_alignLeft="@+id/linearLayout2"
+        android:layout_alignRight="@+id/linearLayout2"
         android:layout_below="@+id/textView2"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border"
         android:orientation="vertical" >
-                <!--  android:background="@drawable/shape_no_corner_without_bottom"-->
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" 
-            android:layout_marginTop="10dp">
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/underline"
+            android:orientation="horizontal" >
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical|center_horizontal"
+                android:layout_gravity="center"
+                android:gravity="bottom"
                 android:text="商家名称："
-                android:textSize="14dp"/>
+                android:textSize="14dp" />
 
             <EditText
                 android:id="@+id/editText1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@null"
                 android:hint="最多输入12个汉字"
-                android:textSize="13dp" 
-                android:background = "@null"/>
+                android:textSize="13dp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" 
-            android:layout_marginTop="10dp">
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/underline"
+            android:orientation="horizontal" >
 
             <TextView
                 android:id="@+id/industryClassificationTextView"
@@ -86,28 +116,24 @@
                 android:gravity="center_vertical|center_horizontal"
                 android:text="行业分类："
                 android:textSize="14dp" />
-<!-- 
-            <EditText
-                android:id="@+id/industryClassificationTextView4EditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textMultiLine"
-                android:textSize="14dp" /> -->
 
             <TextView
                 android:id="@+id/industryClassification"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                 android:textSize="13dp"
-                 android:hint="选择商家经营范围"/>
-
+                android:hint="选择商家经营范围"
+                android:textSize="13dp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" 
-            android:layout_marginTop="10dp">
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/underline"
+            android:orientation="horizontal" >
 
             <TextView
                 android:id="@+id/registerNumberTextView"
@@ -121,17 +147,21 @@
                 android:id="@+id/registerNumberEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#00000000"
                 android:hint="填写营业执照12位或15位注册号"
                 android:inputType="textMultiLine"
-                android:textSize="13dp"
-                android:background = "#00000000" />
+                android:textSize="13dp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" 
-            android:layout_marginTop="10dp">
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/underline"
+            android:orientation="horizontal" >
 
             <TextView
                 android:id="@+id/addressTextView"
@@ -145,16 +175,20 @@
                 android:id="@+id/addressEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#00000000"
                 android:inputType="textMultiLine"
-                android:textSize="14dp" 
-                android:background = "#00000000"/>
+                android:textSize="14dp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp" >
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/underline"
+            android:orientation="horizontal" >
 
             <TextView
                 android:id="@+id/mapLocationTextView3"
@@ -168,16 +202,20 @@
                 android:id="@+id/mapLocationEditText1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#00000000"
                 android:inputType="textMultiLine"
-                android:textSize="14dp" 
-                android:background = "#00000000"/>
+                android:textSize="14dp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" 
-            android:layout_marginTop="10dp">
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/underline"
+            android:orientation="horizontal" >
 
             <TextView
                 android:id="@+id/proposerTextView3"
@@ -191,16 +229,20 @@
                 android:id="@+id/proposerEditText1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#00000000"
                 android:inputType="textMultiLine"
-                android:textSize="14dp" 
-                android:background = "#00000000"/>
+                android:textSize="14dp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" 
-            android:layout_marginTop="10dp">
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/underline"
+            android:orientation="horizontal" >
 
             <TextView
                 android:id="@+id/telephoneTextView"
@@ -214,20 +256,10 @@
                 android:id="@+id/telephoneEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#00000000"
                 android:inputType="textMultiLine"
-                android:textSize="14dp" 
-                android:background = "#00000000"/>
+                android:textSize="14dp" />
         </LinearLayout>
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
-        android:text="车印象将对商家信息做审核，请确认内容真实有效"
-        android:textSize="12dp" />
 
 </RelativeLayout>
