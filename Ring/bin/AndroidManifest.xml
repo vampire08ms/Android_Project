@@ -66,7 +66,7 @@
             <intent-filter>
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
-        </receiver>
+        </receiver>
         -->
         <activity
             android:name=".ServiceTest"
@@ -75,6 +75,11 @@
 
         <service android:name=".MyService" >
         </service>
+
+        <activity
+            android:name=".Activity_list"
+            android:label="@string/title_activity_activity_list" >
+        </activity>
     </application>
 
 </manifest>

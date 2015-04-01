@@ -8,11 +8,13 @@
     <string name="title_activity_notification">Notification</string>
     <string name="title_activity_main_toast">MainToast</string>
     <string name="title_activity_shared_perferences">SharedPerferencesActivity</string>
-    <string name="title_activity_register">RegisterActivity</string>
-    <string name="title_activity_up_info">UpInfoActivity</string>
-    <string name="title_activity_industry_classifications">IndustryClassificationsActivity</string>
+    <string name="title_activity_register">申请为商家</string>
+    <string name="title_activity_up_info">申请成为商家</string>
+    <string name="title_activity_industry_classifications">行业分类</string>
     <string name="title_activity_industry_classifications_sec">IndustryClassificationsSecActivity</string>
     <string name="title_activity_sqlite">SQLiteActivity</string>
     <string name="title_activity_service_test">ServiceTest</string>
+    <string name="title_activity_activity_list">Activity_list</string>
+    <string name="fontSize"><u>商家名称：</u></string>
 
 </resources>

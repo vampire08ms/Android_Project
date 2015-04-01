@@ -49,8 +49,7 @@ public class Activity_list extends Activity {
 		ListView listView = (ListView) findViewById(R.id.listView1);
 
 		initTreasure();
-		TreasureAdapter adapter = new TreasureAdapter(Activity_list.this,
-				R.layout.treasure_item, treasureList);
+		TreasureAdapter adapter = new TreasureAdapter(Activity_list.this,R.layout.treasure_item, treasureList);
 		listView.setAdapter(adapter);
 		listView.setOnItemClickListener(new OnItemClickListener() {
 			@Override

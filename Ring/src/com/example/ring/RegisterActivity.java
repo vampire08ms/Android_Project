@@ -8,16 +8,19 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class RegisterActivity extends ActionBarActivity {
 
 	public Button upLoadInfo = null;
+	public TextView industryClassification = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_register);
 
+		industryClassification = (TextView) findViewById(R.id.industryClassification);
 		upLoadInfo = (Button) findViewById(R.id.upLoadInfo);
 		upLoadInfo.setOnClickListener(new OnClickListener() {
 
@@ -26,6 +29,17 @@ public class RegisterActivity extends ActionBarActivity {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent();
 				intent.setClass(RegisterActivity.this, UpInfoActivity.class);
+				startActivity(intent);
+			}
+		});
+
+		industryClassification.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent();
+				intent.setClass(RegisterActivity.this, IndustryClassificationsFirstActivity.class);
 				startActivity(intent);
 			}
 		});

@@ -13,8 +13,7 @@ public class TreasureAdapter extends ArrayAdapter<Treasure> {
 
 	private int resourceId;
 
-	public TreasureAdapter(Context context, int textViewResourceId,
-			List<Treasure> objects) {
+	public TreasureAdapter(Context context, int textViewResourceId,List<Treasure> objects) {
 		super(context, textViewResourceId, objects);
 		resourceId = textViewResourceId;
 	}

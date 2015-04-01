@@ -1,16 +1,30 @@
 package com.example.ring;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import list.Classification;
+import list.ClassificationAdapter;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 
 public class IndustryClassificationsFirstActivity extends ActionBarActivity {
+
+	public ListView listView = null;
+	ClassificationAdapter adapter = null;
+	private List<Classification> classificationList = new ArrayList<Classification>();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_industry_classifications_first);
+		listView = (ListView) findViewById(R.id.listView1);
+		InitClassificationName();
+		adapter = new ClassificationAdapter(IndustryClassificationsFirstActivity.this, R.layout.classification_item, classificationList);
+		listView.setAdapter(adapter);
 	}
 
 	@Override
@@ -30,5 +44,22 @@ public class IndustryClassificationsFirstActivity extends ActionBarActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	public void InitClassificationName() {
+		Classification standrad = new Classification("≤Õ“˚");
+		classificationList.add(standrad);
+		
+		Classification standrad1 = new Classification("–›œ–”È¿÷");
+		classificationList.add(standrad1);
+		
+		Classification standrad2 = new Classification("π∫ŒÔ");
+		classificationList.add(standrad2);
+		
+		Classification standrad3 = new Classification("¿ˆ»À");
+		classificationList.add(standrad3);
+		
+		Classification standrad4 = new Classification("Ω·ªÈ");
+		classificationList.add(standrad4);
 	}
 }
