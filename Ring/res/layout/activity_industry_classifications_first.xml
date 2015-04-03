@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="请选择一级分类" 
-            android:textSize="15dp"/>
+            android:textSize="17dp"/>
     </LinearLayout>
 
     <ListView
@@ -29,6 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/linearLayout1"
+        android:background="@drawable/listborder"
         android:layout_below="@+id/linearLayout1" >
     </ListView>
 

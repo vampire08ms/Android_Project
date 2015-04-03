@@ -20,6 +20,7 @@
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="17dp"
             android:text="请选择二级分类" />
     </LinearLayout>
 
@@ -28,6 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:background="@drawable/listborder"
         android:layout_below="@+id/linearLayout1" >
     </ListView>
 
