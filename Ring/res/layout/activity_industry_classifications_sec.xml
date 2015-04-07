@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout="@layout/title"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -10,18 +11,24 @@
 
     <LinearLayout
         android:id="@+id/linearLayout1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:orientation="vertical" >
-
+<!-- 
+        <com.example.ring.TitleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </com.example.ring.TitleLayout>
+ -->
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="17dp"
-            android:text="请选择二级分类" />
+            android:layout_marginTop="20dp"
+            android:text="请选择二级分类"
+            android:textSize="17dp" />
     </LinearLayout>
 
     <ListView
@@ -29,8 +36,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:background="@drawable/listborder"
-        android:layout_below="@+id/linearLayout1" >
+        android:layout_below="@+id/linearLayout1"
+        android:background="@drawable/listborder" >
     </ListView>
 
 </RelativeLayout>

@@ -113,14 +113,15 @@
                 android:id="@+id/industryClassificationTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical|center_horizontal"
+                android:gravity="left"
                 android:text="行业分类："
                 android:textSize="14dp" />
 
             <TextView
                 android:id="@+id/industryClassification"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:hint="选择商家经营范围"
                 android:textSize="13dp" />
         </LinearLayout>
