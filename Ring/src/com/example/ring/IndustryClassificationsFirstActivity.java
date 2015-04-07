@@ -19,9 +19,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,38 +33,50 @@ import android.widget.AdapterView.OnItemClickListener;
 public class IndustryClassificationsFirstActivity extends Activity {
 
 	public ListView listView = null;
+	public TextView titleTextView = null;
+	private Button backButton = null;
 	ClassificationAdapter adapter = null;
+	Classification item = null;
 	private List<Classification> classificationList = new ArrayList<Classification>();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+//		requestWindowFeature(Window.FEATURE_NO_TITLE);
+//		setContentView(R.layout.activity_industry_classifications_first);
+		requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
 		setContentView(R.layout.activity_industry_classifications_first);
+		//设置标题为某个layout
+		getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.title);
 		listView = (ListView) findViewById(R.id.listView1);
-		InitClassificationName();
-		adapter = new ClassificationAdapter(
-				IndustryClassificationsFirstActivity.this,
-				R.layout.classification_item, classificationList);
-		listView.setAdapter(adapter);
+		titleTextView = (TextView) findViewById(R.id.textView1);
 
+		titleTextView.setText("行业分类");
+		InitClassificationName();
+		adapter = new ClassificationAdapter(	IndustryClassificationsFirstActivity.this,R.layout.classification_item, classificationList);
+		listView.setAdapter(adapter);
 		listView.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
 				// TODO Auto-generated method stub
+				item = classificationList.get(arg2);
 				Intent intent = new Intent();
-				intent.setClass(IndustryClassificationsFirstActivity.this,IndustryClassificationsSecActivity.class);
+				intent.putExtra("title", item.getName());
+				intent.setClass(IndustryClassificationsFirstActivity.this,
+						IndustryClassificationsSecActivity.class);
 				startActivity(intent);
 			}
+		});
+		backButton = (Button) findViewById(R.id.button1);
+		backButton.setOnClickListener(new OnClickListener() {
 
-			
-//			public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
-//				// TODO Auto-generated method stub
-//				Intent intent = new Intent();
-//				intent.setClass(IndustryClassificationsFirstActivity.this,MainActivity1.class);
-//				startActivity(intent);
-//			}
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				finish();
+			}
 		});
 	}
 

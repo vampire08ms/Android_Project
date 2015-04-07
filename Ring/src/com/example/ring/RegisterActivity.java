@@ -2,6 +2,7 @@ package com.example.ring;
 
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
+import android.database.CursorJoiner.Result;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,6 +15,7 @@ public class RegisterActivity extends ActionBarActivity {
 
 	public Button upLoadInfo = null;
 	public TextView industryClassification = null;
+	public Intent result = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,7 @@ public class RegisterActivity extends ActionBarActivity {
 				startActivity(intent);
 			}
 		});
+
 	}
 
 	@Override
@@ -62,5 +65,17 @@ public class RegisterActivity extends ActionBarActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	@Override
+	protected void onStart() {
+		// TODO Auto-generated method stub
+		super.onStart();
+		
+		result = getIntent();
+		if( null != result)
+		{
+			industryClassification.setText(result.getStringExtra("first"));
+		}
 	}
 }

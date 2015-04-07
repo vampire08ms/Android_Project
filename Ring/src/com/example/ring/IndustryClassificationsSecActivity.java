@@ -5,45 +5,71 @@ import java.util.List;
 
 import list.Classification;
 import list.ClassificationAdapter;
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
-import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.TextView;
 
-public class IndustryClassificationsSecActivity extends ActionBarActivity {
+public class IndustryClassificationsSecActivity extends Activity {
 
 	public ListView listView = null;
+	public TextView titleTextView = null;
+	private Button backButton = null;
 	ClassificationAdapter adapter = null;
+	Classification item = null;
+	String title = null;
+	Intent intent = null;
 	private List<Classification> classificationList = new ArrayList<Classification>();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_industry_classifications_sec);
+		requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
+		setContentView(R.layout.activity_industry_classifications_first);
+		//设置标题为某个layout
+		getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.title);
 
 		listView = (ListView) findViewById(R.id.listView1);
-		InitClassificationName();
-		adapter = new ClassificationAdapter(
-				IndustryClassificationsSecActivity.this,
-				R.layout.classification_item, classificationList);
-		listView.setAdapter(adapter);
+		titleTextView = (TextView) findViewById(R.id.textView1);
 
-		// listView.setOnItemClickListener(new OnItemClickListener() {
-		//
-		// @Override
-		// public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
-		// long arg3) {
-		// // TODO Auto-generated method stub
-		// // Intent intent = new Intent();
-		// //
-		// intent.setClass(IndustryClassificationsFirstActivity.this,IndustryClassificationsSecActivity.class);
-		// // startActivity(intent);
-		// }
+		intent = getIntent();
+		title = intent.getStringExtra("title");
+		titleTextView.setText(title);
+		InitClassificationName();
+		adapter = new ClassificationAdapter(	IndustryClassificationsSecActivity.this,	R.layout.classification_item, classificationList);
+		listView.setAdapter(adapter);
+		listView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,long arg3) {
+				// TODO Auto-generated method stub
+				item = classificationList.get(arg2);
+				Intent intent = new Intent();
+				intent.putExtra("first", title);
+				intent.putExtra("second", item.getName() );
+				intent.setClass(IndustryClassificationsSecActivity.this, RegisterActivity.class);
+				startActivity(intent);
+			}
+		});
+
+		backButton = (Button) findViewById(R.id.button1);
+		backButton.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				finish();
+			}
+		});
 	}
 
 	@Override

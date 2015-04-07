@@ -53,12 +53,10 @@ public class Activity_list extends Activity {
 		listView.setAdapter(adapter);
 		listView.setOnItemClickListener(new OnItemClickListener() {
 			@Override
-			public void onItemClick(AdapterView<?> parent, View view,
-					int position, long id) {
+			public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
 				// TODO Auto-generated method stub
 				Treasure treasure = treasureList.get(position);
-				Toast.makeText(Activity_list.this, treasure.getName(),
-						Toast.LENGTH_SHORT).show();
+				Toast.makeText(Activity_list.this, treasure.getName(),	Toast.LENGTH_SHORT).show();
 
 				Intent intent = new Intent();
 				intent.putExtra("listItem", treasure);
