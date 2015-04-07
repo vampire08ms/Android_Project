@@ -18,47 +18,58 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
+            android:launchMode="singleTask"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity1"
+            android:launchMode="singleTask"
             android:label="@string/title_activity_main_activity1" >
         </activity>
         <activity
             android:name=".MainNotification"
+            android:launchMode="singleTask"
             android:label="@string/title_activity_notification" >
         </activity>
         <activity
             android:name=".MainToast"
+            android:launchMode="singleTask"
             android:label="@string/title_activity_main_toast" >
         </activity>
         <activity
             android:name=".SharedPerferencesActivity"
+            android:launchMode="singleTask"
             android:label="@string/title_activity_shared_perferences" >
         </activity>
         <activity
             android:name=".RegisterActivity"
+            android:launchMode="singleTask"
             android:label="@string/title_activity_register" >
         </activity>
         <activity
             android:name=".UpInfoActivity"
+            android:launchMode="singleTask"
             android:label="@string/title_activity_up_info" >
         </activity>
         <activity
             android:name=".IndustryClassificationsFirstActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/mystyle"
             android:label="@string/title_activity_industry_classifications" >
         </activity>
         <activity
             android:name=".IndustryClassificationsSecActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/mystyle"
             android:label="@string/title_activity_industry_classifications_sec" >
         </activity>
         <activity
             android:name=".SQLiteActivity"
+            android:launchMode="singleTask"
             android:label="@string/title_activity_sqlite" >
         </activity>
         <!--

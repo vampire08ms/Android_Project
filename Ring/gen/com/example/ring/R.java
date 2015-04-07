@@ -1077,22 +1077,27 @@ containing a value of this type.
         public static final int abc_textfield_searchview_holo_light=0x7f020054;
         public static final int abc_textfield_searchview_right_holo_dark=0x7f020055;
         public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
-        public static final int ic_launcher=0x7f020057;
-        public static final int icon_breastplate_of_eldritch_might=0x7f020058;
-        public static final int icon_cuirass_of_the_dwarven_kings=0x7f020059;
-        public static final int icon_dragon_scale_armor=0x7f02005a;
-        public static final int icon_ring_of_lightning_protection=0x7f02005b;
-        public static final int icon_robe_of_sar_issus=0x7f02005c;
-        public static final int icon_runic_war_harness=0x7f02005d;
-        public static final int icon_scale_mail_of_enlightenment=0x7f02005e;
-        public static final int icon_tunic_of_the_carved_flesh=0x7f02005f;
-        public static final int shape=0x7f020060;
-        public static final int shape_no_corner_without_bottom=0x7f020061;
+        public static final int arrow_blue=0x7f020057;
+        public static final int arrow_right_disabled=0x7f020058;
+        public static final int border=0x7f020059;
+        public static final int ic_launcher=0x7f02005a;
+        public static final int icon_breastplate_of_eldritch_might=0x7f02005b;
+        public static final int icon_cuirass_of_the_dwarven_kings=0x7f02005c;
+        public static final int icon_dragon_scale_armor=0x7f02005d;
+        public static final int icon_ring_of_lightning_protection=0x7f02005e;
+        public static final int icon_robe_of_sar_issus=0x7f02005f;
+        public static final int icon_runic_war_harness=0x7f020060;
+        public static final int icon_scale_mail_of_enlightenment=0x7f020061;
+        public static final int icon_tunic_of_the_carved_flesh=0x7f020062;
+        public static final int listborder=0x7f020063;
+        public static final int rs_carrot_right=0x7f020064;
+        public static final int shape=0x7f020065;
+        public static final int underline=0x7f020066;
     }
     public static final class id {
-        public static final int ImageView01=0x7f09005d;
-        public static final int TextView01=0x7f09005c;
-        public static final int TextView02=0x7f09005e;
+        public static final int ImageView01=0x7f09005e;
+        public static final int TextView01=0x7f09005d;
+        public static final int TextView02=0x7f09005f;
         public static final int action_bar=0x7f09001c;
         public static final int action_bar_activity_content=0x7f090001;
         public static final int action_bar_container=0x7f09001b;
@@ -1104,13 +1109,16 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f090002;
         public static final int action_menu_presenter=0x7f090003;
         public static final int action_mode_close_button=0x7f090024;
-        public static final int action_settings=0x7f090062;
+        public static final int action_settings=0x7f090067;
         public static final int activity_chooser_view_content=0x7f090025;
-        public static final int addressEditText=0x7f090051;
-        public static final int addressTextView=0x7f090050;
+        public static final int addressEditText=0x7f090052;
+        public static final int addressTextView=0x7f090051;
         public static final int always=0x7f09000f;
         public static final int beginning=0x7f090016;
-        public static final int bindServiceButton=0x7f09005a;
+        public static final int bindServiceButton=0x7f09005b;
+        public static final int btn_first=0x7f090062;
+        public static final int btn_second=0x7f090063;
+        public static final int btn_third=0x7f090064;
         public static final int button1=0x7f090041;
         public static final int button2=0x7f090042;
         public static final int button3=0x7f090044;
@@ -1118,8 +1126,9 @@ containing a value of this type.
         public static final int button5=0x7f090048;
         public static final int button6=0x7f090047;
         public static final int button7=0x7f090045;
+        public static final int buttons_container=0x7f090061;
         public static final int checkbox=0x7f09002d;
-        public static final int classification_name=0x7f09005f;
+        public static final int classification_name=0x7f090060;
         public static final int collapseActionView=0x7f090010;
         public static final int default_activity_button=0x7f090028;
         public static final int dialog=0x7f090014;
@@ -1136,26 +1145,26 @@ containing a value of this type.
         public static final int ifRoom=0x7f090011;
         public static final int image=0x7f090027;
         public static final int imageView1=0x7f090043;
-        public static final int industryClassification=0x7f09004d;
-        public static final int industryClassificationTextView=0x7f09004c;
+        public static final int industryClassification=0x7f09004e;
+        public static final int industryClassificationTextView=0x7f09004d;
         public static final int linearLayout1=0x7f09003c;
         public static final int linearLayout2=0x7f09003f;
         public static final int listMode=0x7f090006;
         public static final int listView1=0x7f09003e;
         public static final int list_item=0x7f090029;
-        public static final int mapLocationEditText1=0x7f090053;
-        public static final int mapLocationTextView3=0x7f090052;
+        public static final int mapLocationEditText1=0x7f090054;
+        public static final int mapLocationTextView3=0x7f090053;
         public static final int middle=0x7f090018;
         public static final int never=0x7f090012;
         public static final int none=0x7f090019;
         public static final int normal=0x7f090007;
         public static final int progress_circular=0x7f090004;
         public static final int progress_horizontal=0x7f090005;
-        public static final int proposerEditText1=0x7f090055;
-        public static final int proposerTextView3=0x7f090054;
+        public static final int proposerEditText1=0x7f090056;
+        public static final int proposerTextView3=0x7f090055;
         public static final int radio=0x7f09002f;
-        public static final int registerNumberEditText=0x7f09004f;
-        public static final int registerNumberTextView=0x7f09004e;
+        public static final int registerNumberEditText=0x7f090050;
+        public static final int registerNumberTextView=0x7f09004f;
         public static final int search_badge=0x7f090032;
         public static final int search_bar=0x7f090031;
         public static final int search_button=0x7f090033;
@@ -1171,20 +1180,21 @@ containing a value of this type.
         public static final int showHome=0x7f09000c;
         public static final int showTitle=0x7f09000d;
         public static final int split_action_bar=0x7f09001e;
-        public static final int startServiceButton=0x7f090058;
-        public static final int stopServiceButton=0x7f090059;
+        public static final int startServiceButton=0x7f090059;
+        public static final int stopServiceButton=0x7f09005a;
         public static final int submit_area=0x7f090039;
         public static final int tabMode=0x7f090008;
-        public static final int telephoneEditText=0x7f090057;
-        public static final int telephoneTextView=0x7f090056;
+        public static final int telephoneEditText=0x7f090058;
+        public static final int telephoneTextView=0x7f090057;
         public static final int textView1=0x7f09003d;
-        public static final int textView2=0x7f09004a;
-        public static final int textView3=0x7f09004b;
+        public static final int textView2=0x7f09004b;
+        public static final int textView3=0x7f09004c;
+        public static final int textView4=0x7f09004a;
         public static final int title=0x7f09002b;
         public static final int top_action_bar=0x7f090020;
-        public static final int treasure_image=0x7f090060;
-        public static final int treasure_name=0x7f090061;
-        public static final int unbindServiceButton=0x7f09005b;
+        public static final int treasure_image=0x7f090065;
+        public static final int treasure_name=0x7f090066;
+        public static final int unbindServiceButton=0x7f09005c;
         public static final int up=0x7f090021;
         public static final int upLoadInfo=0x7f090049;
         public static final int useLogo=0x7f09000e;
@@ -1254,7 +1264,9 @@ containing a value of this type.
         public static final int activity_up_info=0x7f030023;
         public static final int classification_item=0x7f030024;
         public static final int support_simple_spinner_dropdown_item=0x7f030025;
-        public static final int treasure_item=0x7f030026;
+        public static final int test=0x7f030026;
+        public static final int title=0x7f030027;
+        public static final int treasure_item=0x7f030028;
     }
     public static final class menu {
         public static final int activity_list=0x7f0c0000;
@@ -1331,11 +1343,19 @@ containing a value of this type.
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+
+
+
     
 
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
+
+
+
+
         
 
         Base application theme for API 11+. This theme completely replaces
@@ -1354,6 +1374,7 @@ containing a value of this type.
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f0b008c;
+        public static final int CustomWindowTitleBackground=0x7f0b008d;
         /**  Mimic text appearance in select_dialog_item.xml 
          */
         public static final int TextAppearance_AppCompat_Base_CompactMenu_Dialog=0x7f0b0063;
@@ -1556,6 +1577,7 @@ containing a value of this type.
         public static final int Widget_AppCompat_ProgressBar=0x7f0b000a;
         public static final int Widget_AppCompat_ProgressBar_Horizontal=0x7f0b0009;
         public static final int Widget_AppCompat_Spinner_DropDown_ActionBar=0x7f0b0022;
+        public static final int mystyle=0x7f0b008e;
     }
     public static final class styleable {
         /**  ============================================ 
