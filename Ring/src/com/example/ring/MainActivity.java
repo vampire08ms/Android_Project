@@ -30,6 +30,7 @@ public class MainActivity extends Activity {
 
 	public Button button = null;
 	public Button button1 = null;
+	public TextView goldenTextView = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -38,14 +39,24 @@ public class MainActivity extends Activity {
 
 		button = (Button) findViewById(R.id.button1);
 		button1 = (Button) findViewById(R.id.button2);
+		goldenTextView = (TextView) findViewById(R.id.textView1);
+
+		goldenTextView.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent(MainActivity.this,ActivityGolden.class);
+				startActivity(intent);
+			}
+		});
 		try {
 			button.setOnClickListener(new OnClickListener() {
 
 				@Override
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
-					Intent intent = new Intent(MainActivity.this,
-							Activity_list.class);
+					Intent intent = new Intent(MainActivity.this,Activity_list.class);
 					startActivity(intent);
 				}
 			});
@@ -59,7 +70,8 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent(MainActivity.this,RegisterActivity.class);
+				Intent intent = new Intent(MainActivity.this,
+						RegisterActivity.class);
 				startActivity(intent);
 			}
 		});
