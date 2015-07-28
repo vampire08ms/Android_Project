@@ -10,7 +10,7 @@ public class ActivityGolden extends ActionBarActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_golden);
+		setContentView(R.layout.activity_activity_golden);
 	}
 
 	@Override
